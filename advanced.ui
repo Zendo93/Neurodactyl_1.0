@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Advanced</class>
+ <widget class="QDialog" name="Advanced">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1122</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>166666</width>
+    <height>166666</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Advanced</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/pterodactyl.jpg</normaloff>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/pterodactyl.jpg</iconset>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1122</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <widget class="QTabWidget" name="tab">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1400</width>
+      <height>710</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Preprocessing">
+     <property name="maximumSize">
+      <size>
+       <width>1400</width>
+       <height>700</height>
+      </size>
+     </property>
+     <attribute name="title">
+      <string>Preprocessing</string>
+     </attribute>
+     <widget class="QPushButton" name="open">
+      <property name="geometry">
+       <rect>
+        <x>525</x>
+        <y>210</y>
+        <width>76</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open file</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_2">
+      <property name="geometry">
+       <rect>
+        <x>605</x>
+        <y>10</y>
+        <width>501</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::ScrollHandDrag</enum>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>10</y>
+        <width>501</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::ScrollHandDrag</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="preprocessButton">
+      <property name="geometry">
+       <rect>
+        <x>525</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1400</width>
+        <height>710</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/neurons2.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>171</x>
+        <y>627</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Vstup</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>625</y>
+        <width>107</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Original</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maska</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Po normalizacii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Smerova mapa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Po filtracii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kostra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Crossing Number</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>771</x>
+        <y>627</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Výstup</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>822</x>
+        <y>625</y>
+        <width>107</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Original</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maska</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Po normalizacii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Smerova mapa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Po filtracii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kostra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Crossing Number</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>951</x>
+        <y>627</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Uložiť výstup</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>1033</x>
+        <y>624</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <zorder>label_20</zorder>
+     <zorder>open</zorder>
+     <zorder>graphicsView_2</zorder>
+     <zorder>graphicsView</zorder>
+     <zorder>preprocessButton</zorder>
+     <zorder>label_2</zorder>
+     <zorder>comboBox_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>comboBox</zorder>
+     <zorder>label_4</zorder>
+     <zorder>pushButton_2</zorder>
+    </widget>
+    <widget class="QWidget" name="GlobalNN">
+     <attribute name="title">
+      <string>Global NN</string>
+     </attribute>
+     <widget class="QLabel" name="Neuro">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1400</width>
+        <height>710</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/neurons2.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>42</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Počet neurónov skrytej vrstvy</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_hidden">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>61</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>87</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Požadovaná chyba</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_error">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>106</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1e-20</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>132</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Pomer prepojenia neurónov</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_conn_rate">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>151</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0,3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>177</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Pomer učenia</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_learn_rate">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>196</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0,7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>222</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Strmosť výstupnej aktivačnej funkcie</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_stepness">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>241</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0,1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>268</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Maximálny počet epoch</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="global_epochs">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>287</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>5000</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="learn_global">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>322</y>
+        <width>76</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start training</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_2">
+      <property name="geometry">
+       <rect>
+        <x>114</x>
+        <y>323</y>
+        <width>87</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="global_info">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>352</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="MarkantNN">
+     <attribute name="title">
+      <string>Markant NN</string>
+     </attribute>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>89</x>
+        <y>40</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Základné markanty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Komplexné markanty</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>42</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Naučiť na :</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Neuro_M">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1400</width>
+        <height>710</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/neurons2.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="block_size">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>95</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>72</y>
+        <width>68</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Veľkosť bloku</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>121</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Počet vrstiev</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>144</y>
+        <width>115</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3 vrstvy - 1 skrytá</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 vrstvy - 2 skryté</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>170</y>
+        <width>128</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Neuróny 1. skrytej vrstvy</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hidden_n_1">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>193</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>219</y>
+        <width>128</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Neuróny 2. skrytej vrstvy</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hidden_n_2">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>242</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>268</y>
+        <width>95</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Požadovaná chyba</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="error">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>291</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1e-15</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>317</y>
+        <width>90</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Max. počet epoch</string>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="epochs_max">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>340</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>300</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="learn_info">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>400</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="learn_NN">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>370</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start training</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>112</x>
+        <y>371</y>
+        <width>87</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <zorder>Neuro_M</zorder>
+     <zorder>comboBox_4</zorder>
+     <zorder>label</zorder>
+     <zorder>block_size</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_5</zorder>
+     <zorder>comboBox_3</zorder>
+     <zorder>label_6</zorder>
+     <zorder>hidden_n_1</zorder>
+     <zorder>label_10</zorder>
+     <zorder>hidden_n_2</zorder>
+     <zorder>label_7</zorder>
+     <zorder>error</zorder>
+     <zorder>label_8</zorder>
+     <zorder>epochs_max</zorder>
+     <zorder>learn_info</zorder>
+     <zorder>learn_NN</zorder>
+     <zorder>progressBar</zorder>
+    </widget>
+    <widget class="QWidget" name="Extraction">
+     <attribute name="title">
+      <string>Extraction</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>20</number>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="extract_info">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>201</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::ScrollHandDrag</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>143</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Typ markantov pre extrakciu</string>
+         </property>
+         <property name="margin">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_5">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Základné markanty</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Komplexné markanty</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="extract">
+         <property name="text">
+          <string>Extraction</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_3">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1400</width>
+        <height>710</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/neurons2.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>label_18</zorder>
+     <zorder>graphicsView_3</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>extract_info</zorder>
+     <zorder>tableWidget</zorder>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Create DB</string>
+     </attribute>
+     <widget class="QLabel" name="automatic_info">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>80</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::ScrollHandDrag</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="file_automatic">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>42</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open folder</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1400</width>
+        <height>710</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../build-TP-Desktop_Qt_5_3_MSVC2013_32bit-Debug/graphics/neurons2.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>label_19</zorder>
+     <zorder>automatic_info</zorder>
+     <zorder>graphicsView_4</zorder>
+     <zorder>file_automatic</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
