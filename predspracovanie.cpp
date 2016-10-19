@@ -21,7 +21,7 @@
 #include "predspracovanie.h"
 #include "ui_predspracovanie.h"
 #define PI_2 CV_PI/2
-#include <opencv2/core/cuda.hpp>
+#include <opencv2/gpu/gpu.hpp>
 
 using namespace cv;
 using namespace std;

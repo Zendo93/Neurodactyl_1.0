@@ -220,7 +220,7 @@ void Advanced::on_preprocessButton_clicked()
 
 void Advanced::search(Mat img) {
     this->positions.clear();
-    vector <vector<int> > all;
+    QVector <QVector<int> > all;
     int cn,row_shift,col_shift;
     Scalar s;
     int suma;
@@ -233,7 +233,7 @@ void Advanced::search(Mat img) {
             if(img.at<uchar>(k,l) == 0) {
                 cn = abs((img.at<uchar>(k-1,l-1))-(img.at<uchar>(k,l-1)))+abs((img.at<uchar>(k,l-1))-(img.at<uchar>(k+1,l-1)))+abs((img.at<uchar>(k+1,l-1))-(img.at<uchar>(k+1,l)))+abs((img.at<uchar>(k+1,l))-(img.at<uchar>(k+1,l+1)))+abs((img.at<uchar>(k+1,l+1))-(img.at<uchar>(k,l+1)))+abs((img.at<uchar>(k,l+1))-(img.at<uchar>(k-1,l+1)))+abs((img.at<uchar>(k-1,l+1))-(img.at<uchar>(k-1,l)))+abs((img.at<uchar>(k-1,l))-(img.at<uchar>(k-1,l-1)));
                 if((cn/255/2 == 1) || (cn/255/2 == 3)) {
-                    vector<int> tmp(3);
+                    QVector<int> tmp(3);
                     tmp[0] = cn/255/2;
                     tmp[1] = k;
                     tmp[2] = l;
@@ -584,7 +584,7 @@ void Advanced::on_comboBox_5_activated(int index)
     }
 }
 
-Mat Advanced::draw_detected(Mat img, vector <minutiae> detected) {
+Mat Advanced::draw_detected(Mat img, QVector <minutiae> detected) {
     cvtColor(img, img, CV_GRAY2BGR);
     for(int i=0; i<detected.size(); i++) {
         Point center(detected[i].y,detected[i].x);
