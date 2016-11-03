@@ -7,7 +7,6 @@
 #include <QGraphicsPixmapItem>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <vector>
-#include <QVector>
 #include <cmath>
 #include <opencv2/highgui/highgui.hpp>
 
@@ -41,9 +40,9 @@ public:
     Predspracovanie *p;
     QGraphicsPixmapItem *item;
     String network_file;
-    QVector<QVector<int>> positions;
-    QVector <minutiae> detected_minutiae;
-    QVector <minutiae> real_minutiae;
+    vector <vector<int> > positions;
+    vector <minutiae> detected_minutiae;
+    vector <minutiae> real_minutiae;
     Mat output_cn;
     QString basic_filename;
     int mask_sum;
@@ -76,7 +75,7 @@ private slots:
 
     void on_comboBox_5_activated(int index);
 
-    Mat draw_detected(Mat img, QVector <minutiae> detected);
+    Mat draw_detected(Mat img, vector <minutiae> detected);
 
     void on_file_automatic_clicked();
 

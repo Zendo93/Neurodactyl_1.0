@@ -13,7 +13,7 @@
 #include <QDebug>
 #include <QElapsedTimer>
 #include "Graphics_view_zoom.h"
-
+#include <Windows.h>
 
 //////////////////
 #include "opencv2/core/core.hpp"
@@ -220,7 +220,7 @@ void Advanced::on_preprocessButton_clicked()
 
 void Advanced::search(Mat img) {
     this->positions.clear();
-    QVector <QVector<int> > all;
+    vector <vector<int> > all;
     int cn,row_shift,col_shift;
     Scalar s;
     int suma;
@@ -233,7 +233,7 @@ void Advanced::search(Mat img) {
             if(img.at<uchar>(k,l) == 0) {
                 cn = abs((img.at<uchar>(k-1,l-1))-(img.at<uchar>(k,l-1)))+abs((img.at<uchar>(k,l-1))-(img.at<uchar>(k+1,l-1)))+abs((img.at<uchar>(k+1,l-1))-(img.at<uchar>(k+1,l)))+abs((img.at<uchar>(k+1,l))-(img.at<uchar>(k+1,l+1)))+abs((img.at<uchar>(k+1,l+1))-(img.at<uchar>(k,l+1)))+abs((img.at<uchar>(k,l+1))-(img.at<uchar>(k-1,l+1)))+abs((img.at<uchar>(k-1,l+1))-(img.at<uchar>(k-1,l)))+abs((img.at<uchar>(k-1,l))-(img.at<uchar>(k-1,l-1)));
                 if((cn/255/2 == 1) || (cn/255/2 == 3)) {
-                    QVector<int> tmp(3);
+                    vector<int> tmp(3);
                     tmp[0] = cn/255/2;
                     tmp[1] = k;
                     tmp[2] = l;
@@ -584,7 +584,7 @@ void Advanced::on_comboBox_5_activated(int index)
     }
 }
 
-Mat Advanced::draw_detected(Mat img, QVector <minutiae> detected) {
+Mat Advanced::draw_detected(Mat img, vector <minutiae> detected) {
     cvtColor(img, img, CV_GRAY2BGR);
     for(int i=0; i<detected.size(); i++) {
         Point center(detected[i].y,detected[i].x);
@@ -609,10 +609,36 @@ bool Advanced::give_global(){
     vector<double> euklid;
     vector<double> out(5);
     vector<vector<double>> classes(4);
+
     classes[0] = {1.0, 0.25, 0.25, 0.0, 0.0};
     classes[1] = {0.25, 1.0, 0.0, 0.0, 0.0};
     classes[2] = {0.25, 0.0, 1.0, 0.0, 0.0};
     classes[3] = {0.0, 0.0, 0.0, 0.0, 1.0};
+    /*classes[0].resize(5);
+    classes[0].append(1.0);
+    classes[0].append(0.25);
+    classes[0].append(0.25);
+    classes[0].append(0.0);
+    classes[0].append(0.0);
+    classes[1].resize(5);
+    classes[1].append(0.25);
+    classes[1].append(1.0);
+    classes[1].append(0.0);
+    classes[1].append(0.0);
+    classes[1].append(0.0);
+    classes[2].resize(5);
+    classes[2].append(0.25);
+    classes[2].append(0.0);
+    classes[2].append(1.0);
+    classes[2].append(0.0);
+    classes[2].append(0.0);
+    classes[3].resize(5);
+    classes[3].append(0.0);
+    classes[3].append(0.0);
+    classes[3].append(0.0);
+    classes[3].append(0.0);
+    classes[3].append(1.0);*/
+
     this->global_net = "neural_networks/global.net";
 
 
@@ -625,7 +651,9 @@ bool Advanced::give_global(){
         }
 
         for(int i=0;i<4;i++){
-            euklid.push_back(norm(classes[i],out));
+
+             euklid.push_back(norm(classes[i],out));
+
         }
 
         int dist = distance(euklid.begin(),std::min_element(euklid.begin(),euklid.end()));

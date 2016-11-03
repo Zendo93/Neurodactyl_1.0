@@ -1,5 +1,6 @@
 #include "start_window.h"
 #include <QApplication>
+#include <Windows.h>
 
 int main(int argc, char *argv[])
 {
